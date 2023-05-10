@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "start": "nodemon server/index.js",
-    "build": "nodemon ./bin/www"
+    "build": "npm install && nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
