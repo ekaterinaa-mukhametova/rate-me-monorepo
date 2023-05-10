@@ -28,12 +28,6 @@ app.use('/api/', reviewsRouter);
 
 app.use(express.static(path.join(__dirname, "..", "client", "build")));
 
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
-});
-
 // catch 404 and forward to error handler
 /* app.use((req, res, next) => {
   next(createError(404));
