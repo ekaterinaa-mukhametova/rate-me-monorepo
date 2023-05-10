@@ -24,7 +24,7 @@ app.use(cookieParser());
 
 app.use('/api/users', userRouter);
 app.use('/api/review', reviewRouter);
-app.use('/api/', reviewsRouter);
+app.use('/api', reviewsRouter);
 
 app.use(express.static(path.join(__dirname, "..", "client", "build")));
 

@@ -7,7 +7,7 @@
     "start-server": "nodemon ./bin/www",
     "build-server": "npm install",
     "build-all": "cd client && npm run build-client && cd .. && npm run build-server",
-    "start-all": "cd client && npm run start-client && cd .. && npm run start-server"
+    "start-all": "npm run start-server && cd client && npm run start-client"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
