@@ -4,8 +4,9 @@
   "description": "",
   "main": "server/index.js",
   "scripts": {
-    "start": "nodemon server/index.js",
-    "build": "npm install && nodemon ./bin/www"
+    "start-server": "nodemon ./bin/www",
+    "build-server": "npm install && nodemon ./bin/www",
+    "build-all": "cd client && npm run build && cd .. && npm run build-server"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
