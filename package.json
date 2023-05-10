@@ -6,7 +6,8 @@
   "scripts": {
     "start-server": "nodemon ./bin/www",
     "build-server": "npm install && nodemon ./bin/www",
-    "build-all": "cd client && npm run build && cd .. && npm run build-server"
+    "build-all": "cd client && npm run build-client && cd .. && npm run build-server",
+    "start-all": "cd client && npm run start-client && cd .. && npm run start-server"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
