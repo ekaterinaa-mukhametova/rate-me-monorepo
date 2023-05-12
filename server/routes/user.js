@@ -32,6 +32,7 @@ router.put('/sign-up', async (req, res) => {
     });
     res.send({ result: 'ok', token, userId });
   } catch (err) {
+    console.log(err);
     res.send({ result: 'error', message: err.message });
   }
 });

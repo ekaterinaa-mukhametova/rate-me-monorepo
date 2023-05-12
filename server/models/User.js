@@ -33,9 +33,12 @@ class User {
       throw new Error('User already exist');
     }
 
-    const columnSet = Object.values(userSchema);
-    const values = Object.entries(userData).map(([key, value]) => ({ [userSchema[key]]: value }));
-    values.push({ [userSchema.is_admin]: false });
+    const columnSet = Object.entries(userData).map(([key]) => (userSchema[key]));
+    columnSet.push(userSchema.userId);
+    const newUser = {};
+    Object.entries(userData).forEach(([key, value]) => { newUser[userSchema[key]] = value; });
+    newUser[userSchema.userId] = userId;
+    const values = [newUser];
 
     await insertValuesOnDB({
       table: 'users',

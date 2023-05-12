@@ -66,7 +66,7 @@ function SignUp(props) {
   const SignUpModalFooter = useMemo(() => (
     <>
       <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Skip</button>
-      <button type="submit" onClick={onSubmit} className="btn btn-primary">Send</button>
+      <button type="submit" onClick={onSubmit} className="btn btn-primary" data-bs-dismiss="modal">Send</button>
     </>
   ), [onSubmit]);
 

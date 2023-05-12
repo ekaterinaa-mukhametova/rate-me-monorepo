@@ -28,9 +28,13 @@ const useController = () => {
         const { allUserReviews: myReviews } = await getMyReviews({ userId });
         const mappedReviews = myReviews.map((review) => mapReviewToTable({ review }));
         setMyReviewsData(mappedReviews || []);
+        if (!mappedReviews.length) {
+          setmyReviewsDataError("You didn't created any review yet");
+        }
       } catch (err) {
         if (err.message === errorTypes.noPermissionError
           || err.message === errorTypes.notAuthError) {
+          window.open('/');
           setmyReviewsDataError(err.message);
           // TODO: openAuthModal()
         } else {

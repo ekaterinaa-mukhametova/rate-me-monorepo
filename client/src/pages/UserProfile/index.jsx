@@ -71,11 +71,13 @@ function UserProfilel() {
   return (
     <div className="bg-body-tertiary" style={{ minHeight: '100vh' }} data-bs-theme="dark">
       <Header />
-      <div>{myReviewsDataError}</div>
+      <div className="text-dark-emphasis fs-3 p-3">{myReviewsDataError}</div>
       <div className="container">
-        <ReviewsTable
-          content={tableContent}
-        />
+        {myReviewsData?.length ? (
+          <ReviewsTable
+            content={tableContent}
+          />
+        ) : null}
         {ButtonAddReview}
       </div>
     </div>

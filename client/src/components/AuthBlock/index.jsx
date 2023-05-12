@@ -7,8 +7,10 @@ function AuthBlock(props) {
   const { setUserAuth } = props;
   return (
     <>
-      <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
-      <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
+      <div className="d-flex">
+        <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+        <button type="button" className="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</button>
+      </div>
       <SignUp setUserAuth={setUserAuth} />
       <LogIn setUserAuth={setUserAuth} />
     </>

@@ -68,7 +68,7 @@ function ReviewEditMode() {
       <label className="form-label">Rate</label>
       <input
         type="range"
-        className="form-range"
+        className="form-range bg-secondary"
         min="0"
         max="10"
         onChange={(event) => { setRating(event.target.value); }}
@@ -89,9 +89,9 @@ function ReviewEditMode() {
   ), [reviewText, setReviewText]);
 
   return (
-    <div className="bg-body-tertiary" style={{ minHeight: '100vh' }} data-bs-theme="dark">
+    <div className="bg-body-tertiary text-dark-emphasis" style={{ minHeight: '100vh' }} data-bs-theme="dark">
       <Header />
-      <div className="container">
+      <div className="container pt-2">
         <form onSubmit={submitReview}>
           {ReviewTitleInput}
           {CreationTitleInput}

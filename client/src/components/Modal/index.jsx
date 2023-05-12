@@ -17,7 +17,7 @@ function Modal({
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title text-bg-dark" id="staticBackdropLabel">{header}</h5>
+            <h5 className="modal-title text-bg-dark" id={id}>{header}</h5>
             {withCloseButton && <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />}
           </div>
           <div className="modal-body">

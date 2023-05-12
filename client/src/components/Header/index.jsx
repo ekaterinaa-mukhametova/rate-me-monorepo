@@ -31,7 +31,7 @@ function Header() {
       <div className="container-fluid">
         <div className="d-md-flex">
           <LanguageSwitcher className="me-2" />
-          <ThemeSwitcher />
+          {/* <ThemeSwitcher /> */}
         </div>
         <FullTextSearch />
         {isUserAuth ? (
